@@ -36,10 +36,18 @@ conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 -c pytorch #(
 
 2. Download HM3D datasets:
 
-#### Habitat Matterport
-Download [HM3D](https://aihabitat.org/datasets/hm3d/) dataset using download utility and [instructions](https://github.com/facebookresearch/habitat-sim/blob/089f6a41474f5470ca10222197c23693eef3a001/datasets/HM3D.md):
+#### Setting up datasets
+Download [HM3D](https://aihabitat.org/datasets/hm3d/) dataset using download utility and [instructions](https://github.com/facebookresearch/habitat-sim/blob/089f6a41474f5470ca10222197c23693eef3a001/datasets/HM3D.md). The code requires the datasets in a `data` folder in the following format (same as habitat-lab):
 ```
-python -m habitat_sim.utils.datasets_download --username <api-token-id> --password <api-token-secret> --uids hm3d_minival
+data/
+  scene_datasets/
+  matterport_category_mappings.tsv
+  object_norm_inv_perplexity.npy
+  versioned_data
+  objectgoal_hm3d/
+      train/
+      val/
+      val_mini/
 ```
 
 3. Download additional datasets
@@ -72,21 +80,6 @@ import openai
 # Add your OpenAI API credentials here
 client = OpenAI(api_key = "<YOUR_API_KEY>")
 ```
-
-### Setting up datasets
-The code requires the datasets in a `data` folder in the following format (same as habitat-lab):
-```
-data/
-  scene_datasets/
-  matterport_category_mappings.tsv
-  object_norm_inv_perplexity.npy
-  versioned_data
-  objectgoal_hm3d/
-      train/
-      val/
-      val_mini/
-```
-
 
 ### Running: 
 An example command to run:
