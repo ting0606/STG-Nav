@@ -35,8 +35,6 @@ conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 -c pytorch #(
 - Install [detectron2](https://github.com/facebookresearch/detectron2/) according to your system configuration. 
 
 2. Download HM3D datasets:
-
-#### Setting up datasets
 Download [HM3D](https://aihabitat.org/datasets/hm3d/) dataset using download utility and [instructions](https://github.com/facebookresearch/habitat-sim/blob/089f6a41474f5470ca10222197c23693eef3a001/datasets/HM3D.md). The code requires the datasets in a `data` folder in the following format (same as habitat-lab):
 ```
 data/
