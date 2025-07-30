@@ -88,8 +88,8 @@ data/
 ```
 
 
-### For evaluation: 
-For evaluating the pre-trained model:
+### Running: 
+An example command to run:
 ```
 python main.py --split val --eval 1 --auto_gpu_config 0 \
 -n 1 --num_eval_episodes 2000 \
